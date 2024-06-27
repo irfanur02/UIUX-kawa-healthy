@@ -1,0 +1,101 @@
+body {
+  height: 1000px;
+}
+
+.my-border-input {
+  outline: 1px solid black;
+}
+
+.my-border-btn {
+  border: 1px solid black !important;
+}
+
+.my-border-btn:hover {
+  border: 1px solid black !important;
+}
+
+.my-border-btn:active {
+  border: 1px solid black !important;
+}
+
+.my-bg-main,
+.my-btn-main {
+  background-color: #055160;
+  color: white;
+}
+
+.my-btn-main:hover {
+  background-color: #033f4b;
+  color: white;
+}
+
+.my-btn-main:active {
+  background-color: #055160 !important;
+  color: white !important;
+}
+
+.my-text-main {
+  color: #055160 !important;
+}
+
+.my-template-area {
+  width: 100%;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-areas:
+    'navbar navbar'
+    'sidebar content'
+    'sidebar content';
+}
+
+.my-navbar {
+  grid-area: navbar;
+  background-color: #055160;
+  color: white;
+  padding: 7px 14px 7px 14px;
+}
+
+.my-sidebar {
+  grid-area: sidebar;
+  height: 100vmax;
+  border-right: 1px solid black;
+}
+
+.my-content {
+  grid-area: content;
+  padding: 0 10px 0 10px;
+}
+
+.my-sidebar {
+  border-radius: 0px;
+}
+
+.list-group-item {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+  font-size: .9em !important;
+}
+
+.my-active {
+  background-color: #055160;
+  color: white;
+}
+
+.my-active:hover {
+  background-color: #055160;
+  color: white;
+}
+
+.list-group-item {
+  border: none;
+}
+
+table.my-table-admin thead td {
+  background-color: #055160 !important;
+  color: white !important;
+}
+
+table.my-table-admin tr {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
