@@ -1,16 +1,16 @@
 $(document).ready(function() {
 
-  $("#formMenu select[name='selectPack']").on('change', function() {
+  $("#formMenu select[name='jenisPack']").on('change', function() {
     if(this.value == 1) {
-      $("#formMenu input[name='txtHarga']").attr("disabled", false);
-      $("#formMenu select[name='selectPaket']").attr("disabled", true);
-      $("#formMenu select[name='selectKarbo']").attr("disabled", true);
+      $("#formMenu input[name='hargaMenu']").attr("disabled", false);
+      $("#formMenu select[name='paketMenu']").attr("disabled", true);
+      $("#formMenu select[name='jenisKarbo']").attr("disabled", true);
     };
 
     if(this.value == 2) {
-      $("#formMenu input[name='txtHarga']").attr("disabled", true);
-      $("#formMenu select[name='selectPaket']").attr("disabled", false);
-      $("#formMenu select[name='selectKarbo']").attr("disabled", false);
+      $("#formMenu input[name='hargaMenu']").attr("disabled", true);
+      $("#formMenu select[name='paketMenu']").attr("disabled", false);
+      $("#formMenu select[name='jenisKarbo']").attr("disabled", false);
     };
   });
 

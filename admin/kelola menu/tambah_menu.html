@@ -56,15 +56,16 @@
             <div class="card-body">
               <form action="" id="formMenu">
                 <div class="mb-3 row">
-                  <label for="txtNamaMenu" class="col-md-3 col-form-label">Nama Menu</label>
+                  <label for="namaMenu" class="col-md-3 col-form-label">Nama Menu</label>
                   <div class="col-md-9">
-                    <input type="text" class="form-control form-control-sm my-border-input" id="txtNamaMenu" required>
+                    <input type="text" class="form-control form-control-sm my-border-input" id="namaMenu"
+                      name="namaMenu" required>
                   </div>
                 </div>
                 <div class="mb-3 row">
                   <label class="col-md-3 col-form-label">Kategori Pack</label>
                   <div class="col-md-7">
-                    <select class="form-select form-select-sm my-border-input" name="selectPack" required>
+                    <select class="form-select form-select-sm my-border-input" name="jenisPack" required>
                       <option selected disabled value="">Pilh Jenis Pack</option>
                       <option value="1">Family Pack</option>
                       <option value="2">Personal Pack</option>
@@ -72,17 +73,17 @@
                   </div>
                 </div>
                 <div class="mb-3 row">
-                  <label for="txtHargaMenu" class="col-md-3 col-form-label">Harga Menu</label>
+                  <label for="hargaMenu" class="col-md-3 col-form-label">Harga Menu</label>
                   <div class="col-md-7">
-                    <input type="number" class="form-control form-control-sm my-border-input" id="txtHargaMenu"
-                      name="txtHarga" disabled="true" required>
+                    <input type="number" class="form-control form-control-sm my-border-input" id="hargaMenu"
+                      name="hargaMenu" disabled="true" required>
                   </div>
                 </div>
                 <div class="mb-3 row">
                   <label class="col-md-3 col-form-label">Nama Paket Menu</label>
                   <div class="col-md-7">
                     <select class="form-select form-select-sm my-border-input" aria-label="Default select example"
-                      name="selectPaket" disabled="true" required>
+                      name="paketMenu" disabled="true" required>
                       <option selected disabled value>Pilh Paket Menu</option>
                       <option value="1">Lunch</option>
                       <option value="1">Dinner</option>
@@ -93,7 +94,7 @@
                   <label class="col-md-3 col-form-label">Jenis Karbo</label>
                   <div class="col-md-6">
                     <select class="form-select form-select-sm my-border-input" aria-label="Default select example"
-                      name="selectKarbo" disabled="true" required>
+                      name="jenisKarbo" disabled="true" required>
                       <option selected disabled value>Pilh Jenis Karbo</option>
                       <option value="1">Nasi Merah</option>
                       <option value="1">Maspotato</option>
