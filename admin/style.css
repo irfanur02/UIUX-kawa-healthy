@@ -108,8 +108,115 @@ table.my-table-admin tr {
   width: 70%;
 }
 
+.my-form-jadwal-family {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.my-form-jadwal-family input {
+  display: block;
+}
+
+.my-form-jadwal-family button {
+  width: 100%;
+}
+
+.list-content-jadwal li {
+  padding: .5em !important;
+}
+
+.list-tambah-menu li {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.btnHapusListMenu {
+  padding: 0 !important;
+}
+
+.content-jadwal-personal{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.list-jadwal{
+  display: flex;
+}
+
+.list-jadwal > *{
+  width: 100%;
+}
+
+.list-jadwal .sublist-jadwal:nth-child(1) {
+  width: fit-content;
+  padding: 10px;
+}
+
+.header-list{
+  background-color: #055160;
+  color: white;
+  padding: 10px;
+}
+
+.body-list{
+  padding: 10px;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+@media (max-width: 992px) {
+  .my-sidebar {
+    height: 100vmax;
+  }
+}
+
+@media (max-width: 768px) {
+  .my-template-area {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      'navbar'
+      'content'
+      'content';
+  }
+
+  .my-sidebar {
+    height: 100%;
+  }
+
+  .list-jadwal{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3em;
+  }
+
+  .list-jadwal .sublist-jadwal:nth-child(1) {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .sublist-jadwal:nth-child(1) {
+    border: 1px solid black !important;
+    border-radius: unset !important;
+    border-top-left-radius: .5em !important;
+    border-top-right-radius: .5em !important;
+  }
+
+  .sublist-jadwal:nth-child(2) {
+    border: unset !important;
+    border-right: 1px solid black !important;
+    border-left: 1px solid black !important;
+  }
+
+  .sublist-jadwal:nth-child(3) {
+    border: 1px solid black !important;
+    border-radius: unset !important;
+    border-bottom-left-radius: .5em !important;
+    border-bottom-right-radius: .5em !important;
+  }
 }
