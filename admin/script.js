@@ -16,11 +16,11 @@ $(document).ready(function() {
 
   $("#btnBuatJadwal").on('click', function() {
     if($("#selectJenisPack").val() == 1) {
-      window.location.href = "file:///E:/data%20irfan/penting/ITATS/skripsi/NEW%20CASE/projek/code%20proto/admin/kelola%20jadwal%20menu/jadwal_family_pack.html";
+      window.location.href = "file:///E:/data%20irfan/penting/ITATS/skripsi/NEW%20CASE/projek/code%20proto/admin/kelola_jadwal_family_pack.html";
     }
     
     if($("#selectJenisPack").val() == 2) {
-      window.location.href = "file:///E:/data%20irfan/penting/ITATS/skripsi/NEW%20CASE/projek/code%20proto/admin/kelola%20jadwal%20menu/jadwal_personal_pack.html";
+      window.location.href = "file:///E:/data%20irfan/penting/ITATS/skripsi/NEW%20CASE/projek/code%20proto/admin/kelola_jadwal_personal_pack.html";
     }
   })
 

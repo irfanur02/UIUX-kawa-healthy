@@ -30,21 +30,21 @@
 
     <div class="my-sidebar">
       <div class="list-group">
-        <a href="dashboard.html" class="list-group-item list-group-item-action fw-medium" aria-current="true">
+        <a href="dashboard.html" class="list-group-item my-list-sidebar list-group-item-action fw-medium" aria-current="true">
           Dashboard
         </a>
-        <a href="../pesanan/pesanan.html" class="list-group-item list-group-item-action">Lihat Pesanan</a>
-        <a href="review.html" class="list-group-item list-group-item-action">Lihat Review</a>
-        <a href="../kelola menu/kelola_menu.html" class="list-group-item list-group-item-action">Kelola
+        <a href="pesanan.html" class="list-group-item my-list-sidebar list-group-item-action">Lihat Pesanan</a>
+        <a href="lihat_review.html" class="list-group-item my-list-sidebar list-group-item-action">Lihat Review</a>
+        <a href="kelola_menu.html" class="list-group-item my-list-sidebar list-group-item-action">Kelola
           Menu</a>
-        <a href="../kelola paket menu/kelola_paket_menu.html" class="list-group-item list-group-item-action">Kelola
+        <a href="kelola_paket_menu.html" class="list-group-item my-list-sidebar list-group-item-action">Kelola
           Paket Menu</a>
-        <a href="../kelola jadwal menu/kelola_jadwal_menu.html"
-          class="list-group-item list-group-item-action">Kelola
+        <a href="kelola_jadwal_menu.html"
+          class="list-group-item my-list-sidebar list-group-item-action">Kelola
           Jadwal Menu</a>
-        <a href="../kelola biaya ongkir/kelola_biaya_ongkir.html" class="list-group-item list-group-item-action">Kelola
+        <a href="kelola_biaya_ongkir.html" class="list-group-item my-list-sidebar list-group-item-action">Kelola
           Biaya Ongkir</a>
-        <a href="laporan.html" class="list-group-item list-group-item-action my-active">Laporan</a>
+        <a href="laporan.html" class="list-group-item my-list-sidebar list-group-item-action my-active">Laporan</a>
       </div>
     </div>
     <div class="my-content">
@@ -55,16 +55,16 @@
         <div class="row mt-3 d-flex justify-content-center">
           <div class="col-auto text-center">
             <ul class="list-group">
-              <li class="list-group-item" style="padding: .1em;">
+              <li class="list-group-item border-0" style="padding: .1em;">
                 <div class="fs-6 fw-bolder">Filter</div>
               </li>
-              <li class="list-group-item m-auto" style="padding: .1em; width: fit-content;">
+              <li class="list-group-item border-0 m-auto" style="padding: .1em; width: fit-content;">
                 <select class="form-select form-select-sm my-border-input fw-bolder" id="selectLaporan">
                   <option selected value="bulan">Per Periode</option>
                   <option value="tahun">Per Bulan</option>
                 </select>
               </li>
-              <li class="list-group-item mt-3">
+              <li class="list-group-item border-0 mt-3">
                 <div class="card border border-black">
                   <div class="card-body fw-medium" style="padding: .3em">
                     <form action="" method="">
@@ -100,7 +100,6 @@
         <div class="row">
           <div class="col d-flex justify-content-center">
             <table class="table my-table-admin table-hover text-center mt-3" style="width: fit-content;">
-              <caption class="caption-top text-center fw-bold text-black">Riwayat Jadwal Menu</caption>
               <thead>
                 <tr class="align-middle">
                   <td scope="col" style="padding: .5em 30px .5em 30px;">Tanggal</td>
