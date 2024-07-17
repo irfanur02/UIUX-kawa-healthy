@@ -209,4 +209,9 @@ $(document).ready(function() {
     }
   });
 
+  $(".btnHapusPesanan").on('click', function(e) {
+    var listPesanan = e.target.parentElement.parentElement.parentElement.parentElement;
+    listPesanan.remove();
+  });
+
 })

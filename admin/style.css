@@ -74,6 +74,8 @@ body {
   padding-left: 1.5rem !important;
   padding-right: 1.5rem !important;
   font-size: .9em !important;
+  border: none;
+  border-radius: unset !important;
 }
 
 .my-active {
@@ -86,10 +88,6 @@ body {
   color: white;
 }
 
-.list-group-item {
-  border: none;
-}
-
 table.my-table-admin thead td {
   background-color: #055160 !important;
   color: white !important;
@@ -100,12 +98,54 @@ table.my-table-admin tr {
   border-bottom: 1px solid black;
 }
 
+.content-pesanan table.my-table-admin tr {
+  border: 1px solid black;
+}
+
+.content-detail-pesanan table.my-full-border tr {
+  border: 1px solid black !important;
+}
+
+.content-detail-pesanan table.my-full-border thead td {
+  background-color: #055160 !important;
+  color: white !important;
+}
+
+.content-detail-pesanan table.my-full-border tbody td {
+  border-bottom: unset;
+}
+
+.content-dashboard table.my-full-border tr {
+  border: 1px solid black !important;
+}
+
+.content-dashboard table.my-full-border thead td {
+  background-color: #055160 !important;
+  color: white !important;
+}
+
+.content-dashboard table.my-full-border tbody td {
+  border-bottom: unset;
+}
+
+.content-detail-pesanan .list-pesanan {
+  width: fit-content;
+}
+
+.content-dashboard .list-pesanan {
+  width: 30em;
+}
+
 .content-paket-menu {
   width: 80%;
 }
 
 .content-biaya-ongkir {
   width: 70%;
+}
+
+.content-review-menu{
+  width: 80%;
 }
 
 .my-form-jadwal-family {
@@ -160,6 +200,47 @@ table.my-table-admin tr {
 
 .body-list{
   padding: 10px;
+}
+
+.content-pesanan ul a, 
+.content-detail-pesanan ul a, 
+.content-batal-pesanan ul a, 
+.content-riwayat-pesanan ul a {
+  outline: 1px solid black !important;
+}
+
+.content-pesanan ul li, 
+.content-riwayat-pesanan ul li {
+  padding: unset !important;
+  background-color: unset !important;
+}
+
+.content-pesanan table tr {
+  white-space: nowrap !important;
+}
+
+.content-riwayat-pesanan table td{
+/*  max-width: 70ch !important;*/
+  white-space: nowrap !important;
+/*  width: fit-content; !important;*/
+/*  max-width: fit-content !important;*/
+}
+
+.content-detail-pesanan ul li,
+.content-dashboard ul li {
+  border-left: 1px solid black !important;
+  border-top: 1px solid black !important;
+  border-right: 1px solid black !important;
+}
+
+.content-detail-pesanan ul li:last-child,
+.content-dashboard ul li:last-child {
+  border-bottom: 1px solid black !important;
+}
+
+.content-batal-pesanan table {
+  width: fit-content;
+  margin: 0 auto;
 }
 
 input::-webkit-outer-spin-button,
