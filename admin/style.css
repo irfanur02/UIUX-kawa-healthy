@@ -128,12 +128,12 @@ table.my-table-admin tr {
   border-bottom: unset;
 }
 
-.content-detail-pesanan .list-pesanan {
-  width: fit-content;
-}
-
 .content-dashboard .list-pesanan {
   width: 30em;
+}
+
+.content-detail-pesanan .list-pesanan {
+  width: fit-content;
 }
 
 .content-paket-menu {
@@ -146,6 +146,20 @@ table.my-table-admin tr {
 
 .content-review-menu{
   width: 80%;
+}
+
+.content-jadwal-personal{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.content-pesanan table tr {
+  white-space: nowrap !important;
+}
+
+.content-batal-pesanan table {
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .my-form-jadwal-family {
@@ -172,11 +186,6 @@ table.my-table-admin tr {
 
 .btnHapusListMenu {
   padding: 0 !important;
-}
-
-.content-jadwal-personal{
-  width: 100%;
-  margin: 0 auto;
 }
 
 .list-jadwal{
@@ -215,10 +224,6 @@ table.my-table-admin tr {
   background-color: unset !important;
 }
 
-.content-pesanan table tr {
-  white-space: nowrap !important;
-}
-
 .content-riwayat-pesanan table td{
 /*  max-width: 70ch !important;*/
   white-space: nowrap !important;
@@ -236,11 +241,6 @@ table.my-table-admin tr {
 .content-detail-pesanan ul li:last-child,
 .content-dashboard ul li:last-child {
   border-bottom: 1px solid black !important;
-}
-
-.content-batal-pesanan table {
-  width: fit-content;
-  margin: 0 auto;
 }
 
 input::-webkit-outer-spin-button,
