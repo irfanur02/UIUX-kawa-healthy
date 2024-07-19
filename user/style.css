@@ -14,6 +14,7 @@ body {
   --purplelight: #6f42c1;
   --purple: #6f42c1;
   --purplelight: #e2d9f3;
+  --tosca: #0dcaf0;
 }
 
 .my-border-input {
@@ -37,9 +38,26 @@ body {
   background-color: var(--purpledark);
 }
 
-.my-bg-purple {
-  background-color: var(--purple);
+.my-btn-purple:hover {
   color: white;
+  background-color: var(--purpledark);
+  filter: brightness(1.1);
+}
+
+.my-btn-tosca {
+  color: black;
+  background-color: var(--tosca);
+}
+
+.my-btn-tosca:hover {
+  color: black;
+  background-color: var(--tosca);
+  filter: brightness(1.1);
+}
+
+.my-bg-purple {
+  background-color: var(--purple) !important;
+  color: white !important;
 }
 
 .my-bg-purplelight {
@@ -50,10 +68,76 @@ body {
   border-bottom: 1px solid black !important;
 }
 
-.content-daftar nav {
+nav.my-nav {
   box-shadow: 1px 1px 8px grey !important;
 }
 
-.content-daftar img {
-  box-shadow: 0px 3px 5px grey !important;
+nav img {
+  box-shadow: 0px 3px 10px -4px black !important;
+}
+
+.content {
+  margin-top: 4em;
+}
+
+.content ul.nav-tab a {
+  outline: 1px solid black !important;
+}
+
+.content ul.nav-tab a:hover {
+  background-color: var(--purple);
+  color: white;
+}
+
+.my-active-tab{
+  background-color: var(--purple);
+  color: white;
+}
+
+.content-pesananku .table-content {
+  border: 1px solid black;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: .5em;
+  overflow: hidden;
+}
+
+.content-pesananku table thead tr td {
+  background-color: var(--purple);
+  color: white;
+}
+
+.content-pesananku table tr td {
+  border-bottom: 1px solid black;
+}
+
+.content-pesananku table tbody tr:last-child td {
+  border-bottom: unset;
+}
+
+.content-pesananku table tr td {
+  padding-left: .5em !important;
+  padding-right: .5em !important;
+}
+
+.content-detail-pesanan ul {
+  max-width: 600px;
+}
+
+.content-detail-pesanan ul.data-pesanan p {
+  margin: 0 !important;
+}
+
+.content-detail-pesanan ul.list-pesanan li {
+  border-top: 1px solid black;
+}
+
+.content-detail-pesanan ul.list-pesanan li:first-child {
+  background-color: var(--purple);
+  color: white;
+  border: none;
+}
+
+.content-detail-pesanan table tr td {
+  border: 1px solid black;
 }
