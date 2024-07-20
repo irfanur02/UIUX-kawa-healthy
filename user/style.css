@@ -35,7 +35,18 @@ body {
 
 .my-btn-purple {
   color: white;
+  background-color: var(--purple);
+}
+
+.my-btn-purpledark {
+  color: white;
   background-color: var(--purpledark);
+}
+
+.my-btn-purpledark:hover {
+  color: white;
+  background-color: var(--purpledark);
+  filter: brightness(1.1);
 }
 
 .my-btn-purple:hover {
@@ -58,6 +69,11 @@ body {
 .my-bg-purple {
   background-color: var(--purple) !important;
   color: white !important;
+}
+
+.my-bg-purpledark {
+  background-color: var(--purpledark);
+  color: white;
 }
 
 .my-bg-purplelight {
@@ -94,7 +110,8 @@ nav img {
   color: white;
 }
 
-.content-pesananku .table-content {
+.content-pesananku .table-content,
+.content-pesanan-selesai .table-content {
   border: 1px solid black;
   width: fit-content;
   margin: 0 auto;
@@ -102,16 +119,19 @@ nav img {
   overflow: hidden;
 }
 
-.content-pesananku table thead tr td {
+.content-pesananku table thead tr td,
+.content-pesanan-selesai table thead tr td {
   background-color: var(--purple);
   color: white;
 }
 
-.content-pesananku table tr td {
+.content-pesananku table tr td,
+.content-pesanan-selesai table tr td {
   border-bottom: 1px solid black;
 }
 
-.content-pesananku table tbody tr:last-child td {
+.content-pesananku table tbody tr:last-child td,
+.content-pesanan-selesai table tbody tr:last-child td {
   border-bottom: unset;
 }
 
@@ -120,24 +140,33 @@ nav img {
   padding-right: .5em !important;
 }
 
-.content-detail-pesanan ul {
+.content-pesanan-selesai table tr td {
+  padding-left: 1.3em !important;
+  padding-right: 1.3em !important;
+}
+
+.content-detail-pesanan-b ul,
+.content-detail-pesanan-p ul {
   max-width: 600px;
 }
 
-.content-detail-pesanan ul.data-pesanan p {
+.content-detail-pesanan-b ul.data-pesanan p,
+.content-detail-pesanan-p ul.data-pesanan p {
   margin: 0 !important;
 }
 
-.content-detail-pesanan ul.list-pesanan li {
+.content-detail-pesanan-b ul.list-pesanan li,
+.content-detail-pesanan-p ul.list-pesanan li {
   border-top: 1px solid black;
 }
 
-.content-detail-pesanan ul.list-pesanan li:first-child {
+.content-detail-pesanan-b ul.list-pesanan li:first-child,
+.content-detail-pesanan-p ul.list-pesanan li:first-child {
   background-color: var(--purple);
   color: white;
   border: none;
 }
 
-.content-detail-pesanan table tr td {
+.content-detail-pesanan-b table tr td {
   border: 1px solid black;
 }

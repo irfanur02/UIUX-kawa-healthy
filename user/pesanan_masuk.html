@@ -19,8 +19,8 @@
       </a>
       <div class="justify-content-end">
         <a href="" class="btn btn-sm btn-light my-border-btn rounded-pill mx-1 fw-medium lh-sm" role="button">Daftar Pesanan</a>
-        <a href="" class="btn btn-sm btn-light my-border-btn rounded-pill mx-1 fw-medium lh-sm" role="button">PesananKU</a>
-        <button type="button" class="btn btn-sm btn-light my-border-btn rounded-pill mx-1 fw-medium lh-sm">Profil</button>
+        <a href="pesanan_masuk.html" class="btn btn-sm btn-light my-border-btn rounded-pill mx-1 fw-medium lh-sm" role="button">PesananKU</a>
+        <button type="button" class="btn btn-sm btn-light my-border-btn rounded-pill mx-1 fw-medium lh-sm" data-bs-toggle="modal" data-bs-target="#modalProfil">Profil</button>
       </div>
     </div>
   </nav>
@@ -36,11 +36,11 @@
         <a href="pesanan_masuk.html" class="list-group-item border border-0 list-group-item-action my-active-tab" style="width: max-content;">
                 Pesanan Masuk
         </a>
-        <a href="pesanan_batal.html" class="list-group-item border border-0 list-group-item-action" style="width: max-content;">
-          Pesanan Batal
+        <a href="pesanan_datang.html" class="list-group-item border border-0 list-group-item-action" style="width: max-content;">
+          Akan Datang
         </a>
-        <a href="pesanan_riwayat.html" class="list-group-item border border-0 list-group-item-action" style="width: max-content;">
-          Riwayat Pesanan
+        <a href="pesanan_selesai.html" class="list-group-item border border-0 list-group-item-action" style="width: max-content;">
+          Pesanan Selesai
         </a>
       </ul>
     </div>
@@ -63,8 +63,8 @@
               <td>3 Hari<br>(0 hari terlewat)</td>
               <td>Rp. 150000</td>
               <td>
-                <a class="btn btn-sm my-btn-tosca my-border-btn rounded-pill fw-medium lh-1" href="pesanan_detail_paketan" role="button">Detail</a>
-                <button type="button" class="btn btn-sm btn-warning my-border-btn rounded-pill fw-medium lh-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <a class="btn btn-sm my-btn-tosca my-border-btn rounded-pill fw-medium lh-1" href="pesanan_detail_paketan.html" role="button">Detail</a>
+                <button type="button" class="btn btn-sm btn-warning my-border-btn rounded-pill fw-medium lh-1" data-bs-toggle="modal" data-bs-target="#modalBerhentiPaketan">
                   Berhenti
                 </button>
               </td>
@@ -76,13 +76,119 @@
               <td>Rp. 93000</td>
               <td class="text-end">
                 <a class="btn btn-sm my-btn-tosca my-border-btn rounded-pill fw-medium lh-1" href="pesanan_detail_biasa.html" role="button">Detail</a>
-                <button type="button" class="btn btn-sm btn-warning my-border-btn rounded-pill fw-medium lh-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" class="btn btn-sm btn-warning my-border-btn rounded-pill fw-medium lh-1" data-bs-toggle="modal" data-bs-target="#modalBatalPesan">
                   Batal
                 </button>
               </td>
             </tr>
           </tbody>
         </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Batal-->
+  <div class="modal fade modal-sm" id="modalBatalPesan" tabindex="-1" aria-labelledby="modalBatalPesanLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border border-dark">
+        <div class="modal-header justify-content-center my-bg-purpledark">
+          <h1 class="modal-title fs-5" id="modalBatalPesanLabel">Konfirmasi</h1>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col text-center">
+              <span>Yakin Ingin<br>Membatalkan Pesanan ?</span>
+              <div class="row mt-4">
+                <div class="col d-grid">
+                  <button type="button" class="btn my-btn-purpledark my-border-btn rounded-pill">iya</button>
+                </div>
+                <div class="col d-grid">
+                  <button type="button" class="btn btn-light my-border-btn rounded-pill"
+                    data-bs-dismiss="modal">tidak</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Berhenti-->
+  <div class="modal fade modal-sm" id="modalBerhentiPaketan" tabindex="-1" aria-labelledby="modalBerhentiPaketanLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border border-dark">
+        <div class="modal-header justify-content-center my-bg-purpledark">
+          <h1 class="modal-title fs-5" id="modalBerhentiPaketanLabel">Konfirmasi</h1>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col text-center">
+              <span>Yakin Ingin<br>Berhenti Paketan ?</span>
+              <div class="row mt-4">
+                <div class="col d-grid">
+                  <button type="button" class="btn my-btn-purpledark my-border-btn rounded-pill">iya</button>
+                </div>
+                <div class="col d-grid">
+                  <button type="button" class="btn btn-light my-border-btn rounded-pill"
+                    data-bs-dismiss="modal">tidak</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Profil -->
+  <div class="modal fade" id="modalProfil" tabindex="-1" aria-labelledby="modalProfilLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" style="max-width: 25em;">
+      <div class="modal-content border border-dark">
+        <div class="modal-header justify-content-center my-bg-purpledark">
+          <h1 class="modal-title fs-5" id="modalProfilLabel">Profil</h1>
+        </div>
+        <div class="modal-body">
+          <form action="" class="">
+            <div class="mb-3 lh-1">
+              <label for="txtNama" class="form-label">Nama</label>
+              <input type="text" class="form-control form-control-sm my-border-input" id="txtNama" required>
+            </div>
+            <div class="mb-3 lh-1">
+              <label for="txtAlamat" class="form-label">Alamat</label>
+              <input type="text" class="form-control form-control-sm my-border-input" id="txtAlamat" required>
+            </div>
+            <div class="mb-3 lh-1">
+              <label for="selectKota" class="form-label">Kota</label>
+              <select class="form-select form-select-sm my-border-input" id="selectKota" required>
+                <option selected disabled value=""></option>
+                <option value="1">Gresik</option>
+                <option value="2">Surabaya</option>
+              </select>
+            </div>
+            <div class="mb-3 lh-1">
+              <label for="txtNomorHP" class="form-label">Nomor HP</label>
+              <input type="number" class="form-control form-control-sm my-border-input" id="txtNomorHP" required>
+            </div>
+            <div class="mb-3 lh-1">
+              <label for="txtEmail" class="form-label">Email</label>
+              <input type="email" class="form-control form-control-sm my-border-input" id="txtEmail" required>
+            </div>
+            <div class="mb-3 lh-1">
+              <label for="txtUsername" class="form-label">Username</label>
+              <input type="text" class="form-control form-control-sm my-border-input" id="txtUsername" required>
+            </div>
+            <div class="mb-4 lh-1">
+              <label for="txtPassword" class="form-label">Password</label>
+              <input type="password" class="form-control form-control-sm my-border-input" id="txtPassword" required>
+            </div>
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn btn-sm lh-sm px-4 my-btn-purpledark my-border-btn rounded-pill">UPDATE</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>

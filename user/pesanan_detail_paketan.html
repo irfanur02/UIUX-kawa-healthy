@@ -25,7 +25,7 @@
     </div>
   </nav>
 
-  <div class="content content-detail-pesanan-b container">
+  <div class="content content-detail-pesanan-p container">
     <div class="row pt-4">
       <div class="col text-center">
         <h6>PESANAN KU</h6>
@@ -49,10 +49,18 @@
         <li class="list-group-item boder border-0 border-top border-bottom border-black rounded-0 lh-sm p-1">
           <div class="row">
             <div class="col-md-4">
-              <p><span class="fw-bold">Harga: </span>Rp. 93000</p>
+              <p><span class="fw-bold">Paket Menu Lunch</p>
+              <p><span class="fw-bold">Harga: </span>Rp. 150000</p>
+              <p><span class="fw-bold">Karbo: </span>Nasi Merah</p>
+              <p><span class="fw-bold">Pantangan: </span>Gula</p>
             </div>
             <div class="col-auto">
               <p><span class="fw-bold">Tanggal Transaksi: </span>31 Desember 2024</p>
+              <p><span class="fw-bold">Tanggal Mulai: </span>4 Januari</p>
+              <p><span class="fw-bold">Paketan: </span>3 Hari (0 hari terlewat)</p>
+              <button type="button" class="btn btn-sm btn-warning my-border-btn rounded-pill fw-medium lh-1 mt-1" data-bs-toggle="modal" data-bs-target="#modalGantiMasa">
+                  Ganti Masa Hari
+                </button>
             </div>
           </div>
         </li>
@@ -61,40 +69,100 @@
         <li class="list-group-item text-center">Jadwal</li>
         <li class="list-group-item">
           <div class="row flex-wrap align-items-center">
-            <div class="col-auto">Selasa 2 Januari</div>
+            <div class="col-auto text-center">
+              Selasa 2 Januari<br>
+              <span class="badge text-bg-success border border-black">Selesai</span>
+            </div>
             <div class="col">
-              <table class="table table-sm mb-0">
-                <thead>
-                  <tr>
-                    <td class="text-center fw-medium">Menu</td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <div class="row align-items-center lh-sm">
-                        <div class="col-9">Scramble Egg Saus Shimeji<br>Rp. 30000</div>
-                        <div class="col-3 text-end"><span class="badge text-bg-warning border border-black">2</span> Pedas</div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="row align-items-center lh-sm">
-                        <div class="col-9">Scramble Egg Saus Shimeji<br>Lunch Rp. 30000<br>Karbo Nasi Merah | Pantangan -</div>
-                        <div class="col-3 text-end"><span class="badge text-bg-warning border border-black">2</span></div>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <hr class="mt-2 mb-2">
-              <p class="m-0 text-decoration-underline">Review</p>
-              <p class="m-0">Rasanya enak pas, cocok dah</p>
+            N.merah, ayam cicane, oseng wortel pokcoy, sambal belimbing
+            <hr class="mt-2 mb-2">
+            <p class="m-0 text-decoration-underline">Review</p>
+            <p class="m-0">Rasanya enak pas, cocok dah</p>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="row flex-wrap align-items-center">
+            <div class="col-auto text-center">
+              Selasa 2 Januari<br>
+              <button type="button" class="btn btn-sm btn-danger my-border-btn rounded-pill lh-1 mt-1" data-bs-toggle="modal" data-bs-target="#modalTundaPesanan">
+                  Tunda
+                </button>
+            </div>
+            <div class="col">
+            N.merah, ayam cicane, oseng wortel pokcoy, sambal belimbing
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col text-center">
+              Sisa 1 Hari
             </div>
           </div>
         </li>
       </ul>
+    </div>
+  </div>
+
+  <!-- Modal Tunda-->
+  <div class="modal fade modal-sm" id="modalTundaPesanan" tabindex="-1" aria-labelledby="modalTundaPesananLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border border-dark">
+        <div class="modal-header justify-content-center my-bg-purpledark">
+          <h1 class="modal-title fs-5" id="modalTundaPesananLabel">Konfirmasi</h1>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col text-center">
+              <span>Pesanan  Otomatis Akan<br>Dipindahkan Ke Jadwal Berikutnya,<br>Yakin Ingin Menunda Pesanan ?</span>
+              <div class="row mt-4">
+                <div class="col d-grid">
+                  <button type="button" class="btn btn-sm lh-sm my-btn-purpledark my-border-btn rounded-pill">iya</button>
+                </div>
+                <div class="col d-grid">
+                  <button type="button" class="btn btn-sm lh-sm btn-light my-border-btn rounded-pill"
+                    data-bs-dismiss="modal">tidak</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Ganti Masa Hari-->
+  <div class="modal fade modal-sm" id="modalGantiMasa" tabindex="-1" aria-labelledby="modalGantiMasaLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border border-dark">
+        <div class="modal-header justify-content-center my-bg-purpledark">
+          <h1 class="modal-title fs-5" id="modalGantiMasaLabel">Ganti Masa Hari</h1>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col text-center">
+              <div class="mb-3 lh-1">
+                <div class="d-flex justify-content-center align-items-center">
+                  <label for="selectKota" class="form-label w-100 m-0">Jumlah Hari</label>
+                  <select class="form-select form-select-sm my-border-input" id="selectKota" required>
+                    <option selected disabled value="">Jumlah Hari</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col">
+                  <button type="button" class="btn btn-sm lh-sm my-btn-purpledark my-border-btn rounded-pill px-4">Update Masa hari</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
