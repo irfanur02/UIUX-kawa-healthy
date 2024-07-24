@@ -4,17 +4,23 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-body {
-  font-size: .9em;
-  color: #031633;
-}
-
 :root{
   --purpledark: #2c1a4d;
   --purplelight: #6f42c1;
   --purple: #6f42c1;
   --purplelight: #e2d9f3;
   --tosca: #0dcaf0;
+  --red: #DC3545;
+  --pink: #f8d7da;
+}
+
+body {
+  font-size: .9em;
+  color: var(--purpledark);
+}
+
+.my-text-purpledark {
+  color: var(--purpledark);
 }
 
 .my-border-input {
@@ -76,6 +82,10 @@ body {
   color: white;
 }
 
+.my-bg-pink {
+  background-color: var(--pink);
+}
+
 .my-bg-purplelight {
   background-color: var(--purplelight) !important;
 }
@@ -85,7 +95,7 @@ body {
 }
 
 nav.my-nav {
-  box-shadow: 1px 1px 8px grey !important;
+  box-shadow: 1px -1px 10px black !important;
 }
 
 nav img {
@@ -169,4 +179,135 @@ nav img {
 
 .content-detail-pesanan-b table tr td {
   border: 1px solid black;
+}
+
+.content-daftar-pesanan {
+  max-width: 50em;
+}
+
+.content-daftar-pesanan ul.list-daftar-pesanan li {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.content-daftar-pesanan ul.list-daftar-pesanan li:first-child {
+  border-top: 1px solid black;
+}
+
+.content-daftar-pesanan ul.list-daftar-pesanan button {
+  background-color: var(--red);
+  color: white;
+  height: 100%;
+  font-size: .9em;
+  border-left: 1px solid black;
+}
+
+.content-daftar-pesanan ul.list-daftar-pesanan button:hover {
+  background-color: var(--red);
+  filter: brightness(.9);
+  color: white;
+}
+
+.content-daftar-pesanan ul.list-daftar-pesanan button:active {
+  background-color: var(--red);
+  color: white;
+  border-left: 1px solid black;
+  border-right: 1px solid var(--red);
+  border-top: 1px solid var(--red);
+  border-bottom: 1px solid var(--red);
+}
+
+.content-daftar-pesanan .my-collapse {
+  display: none;
+}
+
+.content-daftar-pesanan .list-pembayaran {
+  border:  unset;
+}
+
+.content-homepage .my-jumbotron {
+  padding-top: 3em;
+  position: relative;
+  height: 100vh;
+  background-color: salmon;
+  overflow: hidden;
+}
+
+.content-homepage .my-img-jumbotron {
+  background-image: url('background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.1);
+  height: 100%;
+  box-shadow: 
+    inset 0px 11px 8px -10px black,
+    inset 0px -150px 50px -100px black;
+}
+
+.content-homepage .my-effect {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 50%;
+  transform: scale(1.3);
+  background-color: var(--pink);
+  filter: blur(130px);
+}
+
+.content-homepage .my-body-jumbotron {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.content-homepage .my-body-jumbotron h4 {
+  letter-spacing: .2em;
+}
+
+.content-homepage .my-body-jumbotron h1 {
+  letter-spacing: .1em;
+}
+
+.content-homepage .my-body-jumbotron h3 {
+  letter-spacing: .1em;
+}
+
+.content-homepage .my-body-jumbotron h1, h3, h4 {
+  text-shadow: 0 0 4px rgba(0, 0, 0, .4);
+}
+
+.content-homepage button:first-child {
+  padding-right: 1em !important;
+}
+
+.content-homepage button:last-child {
+  padding-left: 1em !important;
+}
+
+.content-homepage .my-btn-group {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, .7);
+}
+
+.content-homepage button:hover {
+  background-color: var(--purpledark);
+  color: white;
+}
+
+.content-homepage .content-katalog {
+  background-color: salmon;
+  height: 500px;
+}
+
+.content-daftar-pesanan .InfoDaftarPesanan {
+  display: none;
 }
