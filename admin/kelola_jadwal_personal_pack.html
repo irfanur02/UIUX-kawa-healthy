@@ -19,6 +19,7 @@
       <div class="text-center">
         <div class="row justify-content-between">
           <div class="col-auto">
+            <span class="d-inline-block align-middle mx-2 toggleMenu"><i class="bi bi-list fs-4"></i></span>
             <img src="logo-mini.jpg" alt="logo_kawa_healthy.jpg" class="rounded-circle">
             <span class="align-middle">KAWA HEALTHY</span>
           </div>
@@ -29,23 +30,25 @@
       </div>
     </div>
 
-    <div class="my-sidebar">
-      <div class="list-group">
-        <a href="dashboard.html" class="list-group-item my-list-sidebar list-group-item-action fw-medium" aria-current="true">
-          Dashboard
-        </a>
-        <a href="pesanan.html" class="list-group-item my-list-sidebar list-group-item-action">Lihat Pesanan</a>
-        <a href="lihat_review.html" class="list-group-item my-list-sidebar list-group-item-action">Lihat Review</a>
-        <a href="kelola_menu.html" class="list-group-item my-list-sidebar list-group-item-action">Kelola
-          Menu</a>
-        <a href="kelola_paket_menu.html" class="list-group-item my-list-sidebar list-group-item-action">Kelola
-          Paket Menu</a>
-        <a href="kelola_jadwal_menu.html"
-          class="list-group-item my-list-sidebar list-group-item-action my-active">Kelola
-          Jadwal Menu</a>
-        <a href="kelola_biaya_ongkir.html" class="list-group-item my-list-sidebar list-group-item-action">Kelola
-          Biaya Ongkir</a>
-        <a href="laporan.html" class="list-group-item my-list-sidebar list-group-item-action">Laporan</a>
+    <div class="toggleMenu dropdownMenu">
+      <div class="my-sidebar">
+        <div class="list-group">
+          <a href="dashboard.html" class="list-group-item my-list-sidebar list-group-item-action fw-medium" aria-current="true">
+            Dashboard
+          </a>
+          <a href="pesanan.html" class="list-group-item my-list-sidebar list-group-item-action">Lihat Pesanan</a>
+          <a href="lihat_review.html" class="list-group-item my-list-sidebar list-group-item-action">Lihat Review</a>
+          <a href="kelola_menu.html" class="list-group-item my-list-sidebar list-group-item-action">Kelola
+            Menu</a>
+          <a href="kelola_paket_menu.html" class="list-group-item my-list-sidebar list-group-item-action">Kelola
+            Paket Menu</a>
+          <a href="kelola_jadwal_menu.html"
+            class="list-group-item my-list-sidebar list-group-item-action my-active">Kelola
+            Jadwal Menu</a>
+          <a href="kelola_biaya_ongkir.html" class="list-group-item my-list-sidebar list-group-item-action">Kelola
+            Biaya Ongkir</a>
+          <a href="laporan.html" class="list-group-item my-list-sidebar list-group-item-action">Laporan</a>
+        </div>
       </div>
     </div>
     <div class="my-content content-jadwal-personal">
@@ -54,51 +57,12 @@
           <div class="col text-center">Kelola Jadwal Menu <br> Personal Pack</div>
         </div>
 
-        <div class="list-jadwal-personal">
+        <div class="list-jadwal-personal content-jadwal">
           <div class="list-jadwal mt-4 text-center">
             <div class="sublist-jadwal border border-black rounded-start ">
               <div class="mb-2" >
                 <label for="exampleFormControlInput1" class="form-label">Mulai</label>
-                <input type="date" class="form-control form-control-sm my-border-input txtDate"
-                    style="width: fit-content; margin: auto;">
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input my-border-input cbLibur" type="checkbox">
-                  <label class="form-check-label" for="cbLibur">Libur</label>
-                </div>
-                <br>
-                <button type="button" class="btn mt-1 btn-sm btn-danger rounded-pill my-border-btn btnListHapusJadwal">Hapus</button>
-            </div>
-            <div class="sublist-jadwal border-top border-bottom border-black">
-              <div class="header-list ">Lunch</div>
-              <div class="body-list ">
-                <div class="mb-3">
-                  <label for="txtMenuLunch" class="form-label">Cari</label>
-                  <input type="text" class="form-control form-control-sm my-border-input" id="txtMenuLunch" list="datalistOptions">
-                  <datalist id="datalistOptions">
-                    <option value="Nasi">
-                    <option value="Potato">
-                  </datalist>
-                </div>
-              </div>
-            </div>
-            <div class="sublist-jadwal border border-black rounded-end">
-              <div class="header-list ">Dinner</div>
-              <div class="body-list ">
-                <label for="txtMenuDinner" class="form-label">Cari</label>
-                <input type="text" class="form-control form-control-sm my-border-input" id="txtMenuDinner" list="datalistOptions">
-                <datalist id="datalistOptions">
-                  <option value="Nasi">
-                  <option value="Potato">
-                </datalist>
-              </div>
-            </div>
-          </div>
-          <div class="list-jadwal mt-4 text-center">
-            <div class="sublist-jadwal border border-black rounded-start ">
-              <div class="mb-2" >
-                <label for="exampleFormControlInput1" class="form-label">Mulai</label>
-                <input type="date" class="form-control form-control-sm my-border-input txtDate"
+                <input type="date" class="form-control form-control-sm my-border-input txtDate jadwalPersonal"
                     style="width: fit-content; margin: auto;">
                 </div>
                 <div class="form-check form-check-inline">

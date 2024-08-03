@@ -24,14 +24,28 @@ $(document).ready(function() {
     }
   })
 
-  $(".my-content").on('focus', '.txtDate', function() {
+  $(".my-content .content-jadwal").on('focus', '.txtDate', function() {
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, '0');
     var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
     var yyyy = today.getFullYear();
 
-    today = yyyy + '-' + mm + '-' + dd;
-    $(this).attr("min", today);
+    // var itemJadwal = $(".content-jadwal input[type=date]").length;
+    // var newToday = '';
+    // if (itemJadwal == 1) {
+      newToday = yyyy + '-' + mm + '-' + dd;
+    // } else {
+    //   if ($(this).hasClass('jadwalFamily')) {
+    //     newToday = $(this).parent().parent().parent().parent().find(`ul:nth-child(${itemJadwal-1}) input[type=date]`).val();
+    //   } else {
+    //     newToday = $(this).parent().parent().parent().parent().find(`div.list-jadwal:nth-child(${itemJadwal-1}) input[type=date]`).val();
+    //   }
+    //   var date = newToday.split('-');
+    //   var getDay = parseInt(date[2])+1; 
+    //   var newDay = String(getDay).padStart(2, '0');
+    //   var newToday = date[0] + '-' + date[1] + '-' + newDay;
+    // }
+    $(this).attr("min", newToday);
   });
 
   $("#btnTambahHariFamily").on('click', function() {
@@ -40,7 +54,7 @@ $(document).ready(function() {
             <li class="list-group-item border border-black text-center">
               <div class="mb-2">
                 <label for="exampleFormControlInput1" class="form-label">Mulai</label>
-                <input type="date" class="form-control form-control-sm my-border-input txtDate"
+                <input type="date" class="form-control form-control-sm my-border-input txtDate jadwalFamily"
                   style="width: fit-content; margin: auto;">
               </div>
               <div class="form-check form-check-inline">
@@ -59,27 +73,34 @@ $(document).ready(function() {
                   <option value="Nasi">
                   <option value="Potato">
                 </datalist>
-                <button class="btn btn-sm btn-primary rounded-0 my-border-btn" id="btnTambahMenu">Tambahkan</button>
+                <button class="btn btn-sm btn-primary rounded-0 my-border-btn btnTambahMenu">Tambahkan</button>
               </div>
               <ul class="list-group list-tambah-menu mt-2">
-                <li class="list-group-item">
-                  <div class="row">
-                    <div class="col">
-                      <span class="text-wrap">An dae wafef dsw dfewsefef item</span>
-                    </div>
-                    <div class="col-auto">
-                      <button class="btn btn-sm btnHapusListMenu">
-                        <span class="fs-5 text-danger">
-                          <i class="bi bi-x-square"></i>
-                        </span>
-                      </button>
-                    </div>
-                  </div>
-                </li>
               </ul>
             </li>
           </ul>`);
   });
+
+  $(".content-jadwal-family").on('click', '.btnTambahMenu', function() {
+    var menu = $(this).parent().find("input").val();
+    $(this).parent().parent().find(".list-tambah-menu").append(
+      `<li class="list-group-item">
+          <div class="row">
+            <div class="col">
+              <span class="text-wrap">${menu}</span>
+            </div>
+            <div class="col-auto">
+              <button class="btn btn-sm btnHapusListMenu">
+                <span class="fs-5 text-danger">
+                  <i class="bi bi-x-square"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+        </li>`);
+    $(this).parent().find("input").val('');
+    $(this).parent().find("input").focus();
+  })
 
   $(".content-jadwal-family").on('click', '.btnListHapusJadwal', function(e) {
     var listJadwalMenu = e.target.parentElement.parentElement;
@@ -104,23 +125,9 @@ $(document).ready(function() {
                   <option value="Nasi">
                   <option value="Potato">
                 </datalist>
-                <button class="btn btn-sm btn-primary rounded-0 my-border-btn" id="btnTambahMenu">Tambahkan</button>
+                <button class="btn btn-sm btn-primary rounded-0 my-border-btn btnTambahMenu">Tambahkan</button>
               </div>
               <ul class="list-group list-tambah-menu mt-2">
-                <li class="list-group-item">
-                  <div class="row">
-                    <div class="col">
-                      <span class="text-wrap">An dae wafef dsw dfewsefef item</span>
-                    </div>
-                    <div class="col-auto">
-                      <button class="btn btn-sm btnHapusListMenu">
-                        <span class="fs-5 text-danger">
-                          <i class="bi bi-x-square"></i>
-                        </span>
-                      </button>
-                    </div>
-                  </div>
-                </li>
               </ul>
             </li>`;
     }
@@ -213,5 +220,13 @@ $(document).ready(function() {
     var listPesanan = e.target.parentElement.parentElement.parentElement.parentElement;
     listPesanan.remove();
   });
+
+  $(".my-navbar .toggleMenu").on('click', function() {
+    if (!$(".toggleMenu.dropdownMenu").hasClass("open")) {
+      $(".toggleMenu.dropdownMenu").toggleClass("open");
+    } else {
+      $(".toggleMenu.dropdownMenu").toggleClass("close");
+    }
+  })
 
 })

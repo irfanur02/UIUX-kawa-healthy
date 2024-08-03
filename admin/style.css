@@ -1,5 +1,7 @@
-body {
-  height: 1000px;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .my-border-input {
@@ -53,21 +55,23 @@ body {
   background-color: #055160;
   color: white;
   padding: 7px 14px 7px 14px;
+  z-index: 99;
 }
 
 .my-sidebar {
   grid-area: sidebar;
+  position: relative;
+  top: 0;
+  bottom: 0;
   height: 100vmax;
+  background-color: white;
   border-right: 1px solid black;
+  border-radius: 0px;
 }
 
 .my-content {
   grid-area: content;
   padding: 0 10px 0 10px;
-}
-
-.my-sidebar {
-  border-radius: 0px;
 }
 
 .my-list-sidebar {
@@ -86,6 +90,14 @@ body {
 .my-active:hover {
   background-color: #055160;
   color: white;
+}
+
+.my-navbar .toggleMenu {
+  display: none !important;
+}
+
+.my-navbar .toggleMenu:hover {
+  cursor: pointer;
 }
 
 table.my-table-admin thead td {
@@ -182,21 +194,22 @@ table.my-table-admin tr {
 .list-tambah-menu li {
   padding: 0 !important;
   margin: 0 !important;
+  border: unset !important;
 }
 
 .btnHapusListMenu {
   padding: 0 !important;
 }
 
-.list-jadwal{
+.content-jadwal-personal .list-jadwal{
   display: flex;
 }
 
-.list-jadwal > *{
+.content-jadwal-personal .list-jadwal > *{
   width: 100%;
 }
 
-.list-jadwal .sublist-jadwal:nth-child(1) {
+.content-jadwal-personal .list-jadwal .sublist-jadwal:nth-child(1) {
   width: fit-content;
   padding: 10px;
 }
@@ -222,6 +235,7 @@ table.my-table-admin tr {
 .content-riwayat-pesanan ul li {
   padding: unset !important;
   background-color: unset !important;
+  border: unset !important;
 }
 
 .content-riwayat-pesanan table td{
@@ -243,61 +257,126 @@ table.my-table-admin tr {
   border-bottom: 1px solid black !important;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
+@media (max-width: 576px) {
+  .my-navbar .toggleMenu {
+    display: inline-block !important;
+  }
 
-@media (max-width: 992px) {
-  .my-sidebar {
-    height: 100vmax;
+  .content-jadwal-family .list-content-jadwal {
+    width: 70% !important;
+  }
+
+  .content-biaya-ongkir,
+  .content-paket-menu,
+  .content-review-menu,
+  .content-tambah-menu .form-tambahMenu {
+    width: 100% !important;
   }
 }
 
 @media (max-width: 768px) {
+  .my-navbar .toggleMenu {
+    display: inline-block !important;
+    position: relative;
+  }
+
   .my-template-area {
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
     grid-template-areas:
       'navbar'
-      'content'
+      'sidebar'
       'content';
   }
 
-  .my-sidebar {
-    height: 100%;
+  .toggleMenu.dropdownMenu {
+    position: absolute;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    padding-top: 2.9em;
+    transform: translateX(-100%);
+    z-index: 88;
   }
 
-  .list-jadwal{
+  .toggleMenu.dropdownMenu.open {
+    animation-name: openSidebar;
+    animation-duration: .500s;
+    animation-fill-mode: forwards;
+  }
+
+  .toggleMenu.dropdownMenu.close {
+    animation-name: closeSidebar;
+    animation-duration: .500s;
+    animation-fill-mode: forwards;
+  }
+
+  .content-jadwal-personal .list-jadwal{
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 3em;
   }
 
-  .list-jadwal .sublist-jadwal:nth-child(1) {
+  .content-jadwal-personal .list-jadwal .sublist-jadwal:nth-child(1) {
     width: 100%;
     padding: 10px;
   }
 
-  .sublist-jadwal:nth-child(1) {
+  .content-jadwal-personal .sublist-jadwal:nth-child(1) {
     border: 1px solid black !important;
     border-radius: unset !important;
     border-top-left-radius: .5em !important;
     border-top-right-radius: .5em !important;
   }
 
-  .sublist-jadwal:nth-child(2) {
+  .content-jadwal-personal .sublist-jadwal:nth-child(2) {
     border: unset !important;
     border-right: 1px solid black !important;
     border-left: 1px solid black !important;
   }
 
-  .sublist-jadwal:nth-child(3) {
+  .content-jadwal-personal .sublist-jadwal:nth-child(3) {
     border: 1px solid black !important;
     border-radius: unset !important;
     border-bottom-left-radius: .5em !important;
     border-bottom-right-radius: .5em !important;
+  }
+
+  .content-jadwal-family .list-content-jadwal {
+/*    width: 50% !important;*/
+    margin-bottom: 1em;
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 576px) and (max-width: 768px) { 
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@keyframes openSidebar {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    box-shadow: 0 10px 15px black;
+    transform: translateX(0);
+  }
+}
+
+@keyframes closeSidebar {
+  from {
+    transform: translateX(0);
+    box-shadow: 0 10px 15px black;
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
